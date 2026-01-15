@@ -139,7 +139,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ## Auteur
 
-Votre Nom - [@votre-github](https://github.com/votre-username)
+Massot Sacha - [@sxcha02](https://github.com/sxcha02)
 
 ## Remerciements
 

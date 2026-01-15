@@ -97,6 +97,9 @@ L'outil effectue des tests en temps réel lors du chargement de la page :
 
 Chaque module génère un score sur 100, agrégé en score global.
 
+<img width="1434" height="784" alt="image" src="https://github.com/user-attachments/assets/16ecf166-6a86-48b0-b7a1-9954b29c8b35" />
+
+
 ## Compatibilité
 
 - ✅ Chrome/Edge 90+

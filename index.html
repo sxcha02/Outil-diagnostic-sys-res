@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Système & Réseau</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Diagnostic Système & Réseau</h1>
+            <div class="global-score">
+                <div class="score-circle" id="globalScore">
+                    <span class="score-value">--</span>
+                    <span class="score-label">/100</span>
+                </div>
+                <div class="score-status" id="globalStatus">Analyse en cours...</div>
+            </div>
+        </header>
+
+        <!-- Dashboard Grid -->
+        <main class="dashboard">
+            <!-- Réseau Card -->
+            <div class="card" id="networkCard">
+                <div class="card-header">
+                    <h2>Réseau</h2>
+                    <span class="status-badge" id="networkBadge">WAIT</span>
+                </div>
+                <div class="card-body">
+                    <div class="metric">
+                        <span class="metric-label">Statut</span>
+                        <span class="metric-value" id="connectionStatus">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Type</span>
+                        <span class="metric-value" id="connectionType">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Latence</span>
+                        <span class="metric-value" id="latency">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Vitesse DL</span>
+                        <span class="metric-value" id="downloadSpeed">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">IP Publique</span>
+                        <span class="metric-value" id="publicIP">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigateur Card -->
+            <div class="card" id="browserCard">
+                <div class="card-header">
+                    <h2>Navigateur</h2>
+                    <span class="status-badge" id="browserBadge">WAIT</span>
+                </div>
+                <div class="card-body">
+                    <div class="metric">
+                        <span class="metric-label">Navigateur</span>
+                        <span class="metric-value" id="browserName">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Version</span>
+                        <span class="metric-value" id="browserVersion">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">OS</span>
+                        <span class="metric-value" id="osName">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Résolution</span>
+                        <span class="metric-value" id="screenResolution">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Cookies</span>
+                        <span class="metric-value" id="cookiesEnabled">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Card -->
+            <div class="card" id="performanceCard">
+                <div class="card-header">
+                    <h2>Performance</h2>
+                    <span class="status-badge" id="performanceBadge">WAIT</span>
+                </div>
+                <div class="card-body">
+                    <div class="metric">
+                        <span class="metric-label">Score CPU</span>
+                        <span class="metric-value" id="cpuScore">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Mémoire</span>
+                        <span class="metric-value" id="memoryUsage">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Batterie</span>
+                        <span class="metric-value" id="batteryLevel">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Charge</span>
+                        <span class="metric-value" id="batteryCharging">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stockage Card -->
+            <div class="card" id="storageCard">
+                <div class="card-header">
+                    <h2>Stockage</h2>
+                    <span class="status-badge" id="storageBadge">WAIT</span>
+                </div>
+                <div class="card-body">
+                    <div class="metric">
+                        <span class="metric-label">LocalStorage</span>
+                        <span class="metric-value" id="localStorageStatus">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Espace LS</span>
+                        <span class="metric-value" id="localStorageSize">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">SessionStorage</span>
+                        <span class="metric-value" id="sessionStorageStatus">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">IndexedDB</span>
+                        <span class="metric-value" id="indexedDBStatus">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Cache API</span>
+                        <span class="metric-value" id="cacheAPIStatus">--</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Actions -->
+        <div class="actions">
+            <button class="btn btn-primary" id="refreshBtn">
+                <span id="refreshIcon">↻</span> Relancer les tests
+            </button>
+            <button class="btn btn-secondary" id="exportBtn">
+                Exporter JSON
+            </button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Dashboard de diagnostic - Vanilla JS</p>
+            <p class="timestamp" id="timestamp">--</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
